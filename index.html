@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- html form -->
+<script >
+	const xhr = new XMLHttpRequest();
+	const url = 'http://localhost/contacts';
+	xhr.open("POST", url, true)
+	xhr.setRequestHeader('Content-type', 'application/json');
+
+	const message = {
+		"name": "Esther Kitui",
+		"subject": "special message",
+		"message": "please register me for Akirachix class 2019"
+
+	}
+
+	const messageString = JSON.stringify(message);
+
+	xhr.send(messageString);
+</script>
+</body>
+</html>
